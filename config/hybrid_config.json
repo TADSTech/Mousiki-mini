@@ -1,0 +1,11 @@
+{
+  "cbf_similarity_path": "./models/content/model/similarity_20251206_102344.npz",
+  "cf_model_path": "./models/collaborative/model_weights/ncf_model_20251206_123201.pt",
+  "cf_mappings_path": "./models/collaborative/model_weights/id_mappings_20251206_123201.pkl",
+  "db_connection_string": "postgresql://mousiki_user:mousiki_password@localhost:5432/mousiki",
+  "cbf_weight": 0.4,
+  "cf_weight": 0.4,
+  "popularity_weight": 0.2,
+  "device": "cpu",
+  "notes": "Update model paths after training new CF models"
+}

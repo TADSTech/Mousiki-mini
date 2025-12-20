@@ -1,0 +1,14 @@
+{
+  "timestamp": "20251206_123201",
+  "num_users": 100,
+  "num_items": 906,
+  "embedding_dim": 128,
+  "hidden_layers": [
+    256,
+    128,
+    64
+  ],
+  "device": "cpu",
+  "model_file": "ncf_model_20251206_123201.pt",
+  "mappings_file": "id_mappings_20251206_123201.pkl"
+}

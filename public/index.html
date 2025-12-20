@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mousiki Mini Demo</title>
+    <style>
+        body {
+            font-family: monospace;
+            background: #1a1a1a;
+            color: #0f0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        pre {
+            background: #000;
+            padding: 20px;
+            border: 1px solid #333;
+            white-space: pre-wrap;
+        }
+
+        .footer {
+            color: #666;
+            font-size: 0.8em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Mousiki Mini 🎵</h1>
+    <p>Live recommendation demo running on GitHub Actions.</p>
+
+    <h2>Constraint Verification</h2>
+    <pre>Checking Mousiki Setup...
+✓ Found CBF Similarity Matrix: similarity_20251206_102344.npz
+✓ Found CF Model: ncf_model_20251206_123201.pt
+✓ Found CF Mappings: id_mappings_20251206_123201.pkl
+
+Ready to recommend!
+</pre>
+
+    <h2>Recommendation for User 1</h2>
+    <pre>
+Recommendations for User 1 (Method: cf_fallback)
+┏━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━┓
+┃ Rank   ┃ Track ID ┃  Score ┃     Source ┃
+┡━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━┩
+│ 1      │    39817 │ 0.5906 │ CF, Hybrid │
+│ 2      │    39456 │ 0.5725 │ CF, Hybrid │
+│ 3      │    39841 │ 0.4738 │ CF, Hybrid │
+│ 4      │    39312 │ 0.4670 │ CF, Hybrid │
+│ 5      │    39809 │ 0.4491 │ CF, Hybrid │
+│ 6      │    39340 │ 0.3654 │ CF, Hybrid │
+│ 7      │    39587 │ 0.3415 │ CF, Hybrid │
+│ 8      │    39631 │ 0.3197 │ CF, Hybrid │
+│ 9      │    39212 │ 0.3031 │ CF, Hybrid │
+│ 10     │    39261 │ 0.2974 │ CF, Hybrid │
+└────────┴──────────┴────────┴────────────┘
+</pre>
+
+    <div class="footer">
+        Generated at: 2025-12-20 16:54:09 UTC | <a href="https://github.com/TADSTech/Mousiki-Mini"
+            style="color: #666; text-decoration: underline;">View on GitHub</a>
+    </div>
+</body>
+
+</html>

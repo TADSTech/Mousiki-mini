@@ -1,0 +1,9 @@
+pandas
+numpy
+scipy
+torch
+scikit-learn
+typer[all]
+rich
+python-dotenv
+tqdm

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mousiki Mini Demo</title>
+    <style>
+        body {
+            font-family: monospace;
+            background: #1a1a1a;
+            color: #0f0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        pre {
+            background: #000;
+            padding: 20px;
+            border: 1px solid #333;
+            white-space: pre-wrap;
+        }
+
+        .footer {
+            color: #666;
+            font-size: 0.8em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Mousiki Mini 🎵</h1>
+    <p>Live recommendation demo running on GitHub Actions.</p>
+
+    <h2>Constraint Verification</h2>
+    <pre>{{ SETUP_OUTPUT }}</pre>
+
+    <h2>Recommendation for User 1</h2>
+    <pre>{{ RECS_OUTPUT }}</pre>
+
+    <div class="footer">
+        Generated at: {{ TIMESTAMP }} | <a href="https://github.com/TADSTech/Mousiki-Mini"
+            style="color: #666; text-decoration: underline;">View on GitHub</a>
+    </div>
+</body>
+
+</html>
