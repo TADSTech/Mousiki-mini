@@ -1,1 +1,44 @@
 @import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-900: #1e3a8a;
+  
+  --color-accent-500: #8b5cf6;
+  --color-accent-600: #7c3aed;
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased bg-gray-950 text-gray-50;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-gray-900/40 backdrop-blur-xl border border-gray-800/50 shadow-2xl;
+  }
+  
+  .glass-card {
+    @apply bg-gray-800/40 backdrop-blur-md border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300;
+  }
+
+  /* Custom Scrollbar for a premium feel */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-950/50;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-800 rounded-full hover:bg-gray-700 transition-colors;
+  }
+}

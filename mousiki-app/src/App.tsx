@@ -29,12 +29,16 @@ const App = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-950 text-white">
-      <div className="max-w-7xl mx-auto px-4 py-8">
+    <div className="min-h-screen bg-gray-950 text-gray-50 relative overflow-hidden selection:bg-brand-500/30">
+      {/* Dynamic Background Glows */}
+      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-brand-600/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-accent-600/20 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 py-8 relative z-10">
         <Header trackCount={catalog.length} />
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-          <div className="lg:col-span-3 space-y-6">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mt-8">
+          <div className="lg:col-span-3 space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <MusicLibrary
               tracks={catalog}
               selectedTrack={selectedTrack}
@@ -43,17 +47,22 @@ const App = () => {
             />
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-150">
             <AddMusicForm onAdd={handleAddTrack} />
           </div>
         </div>
 
-        <div className="mt-6">
+        <div className="mt-8 animate-in fade-in slide-in-from-bottom-12 duration-700 delay-300">
           <Recommendations recommender={recommender} catalog={catalog} />
         </div>
 
-        <footer className="mt-12 text-center text-xs text-gray-600 border-t border-gray-800 pt-6">
-          Mousiki — built with React + TypeScript + Tailwind CSS. All computation runs client-side.
+        <footer className="mt-16 text-center text-sm text-gray-500 border-t border-gray-800/50 pt-8 pb-4">
+          <p className="flex items-center justify-center gap-2">
+            <span className="font-medium text-gray-400">Mousiki</span> 
+            <span>&mdash;</span>
+            Built with React, TypeScript & Tailwind CSS.
+          </p>
+          <p className="mt-2 text-xs opacity-60">All computation runs client-side. No backend.</p>
         </footer>
       </div>
     </div>
